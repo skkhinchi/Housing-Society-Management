@@ -1,0 +1,66 @@
+API's for House 
+
+9.Add Houses 
+curl --location --request POST 'http://localhost:9090/houses/add-house' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+      
+        "buildingId": 1,
+        "ownersId": 7
+    }'
+    
+
+10.Show Houses
+
+curl --location --request GET 'http://localhost:9090/houses/show-houses' \
+--header 'Content-Type: application/json' \
+--data-raw ''
+
+11.Update House 
+curl --location --request PUT 'http://localhost:9090/houses/update-house' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+        "id": 1,
+        "buildingId": 2,
+        "ownersId": 1
+    }'
+    
+  12. show house details by Id
+  curl --location --request GET 'http://localhost:9090/houses/show-house-details?id=2' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+        "id": 1,
+        "buildingId": 2,
+        "ownersId": 1
+    }'
+    
+    
+    13. Show Management 
+    curl --location --request GET 'http://localhost:9090/management/show-admin' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+        "id": 1,
+        "buildingId": 2,
+        "ownersId": 1
+    }'
+    
+    14 Update Management 
+    
+    curl --location --request PUT 'http://localhost:9090/management/update-Management' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+        "id": 2,
+        "buildingId": 2,
+        "name": "Punit"
+    }'
+    
+    15. Delete Management 
+    curl --location --request DELETE 'http://localhost:9090/management/delete-admin-data?id=2' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+        "id": 2,
+        "buildingId": 2,
+        "name": "Punit"
+    }'
+    
+    
