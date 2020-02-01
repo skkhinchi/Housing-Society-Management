@@ -24,7 +24,7 @@ curl --location --request PUT 'http://localhost:9090/update-building' \
     }'
     
     
-    
+    //------------------------------
     API for House/flate Owners
     
     4.Add Owner
@@ -45,6 +45,7 @@ curl --location --request PUT 'http://localhost:9090/update-owners' \
     "mobileNo": "4365789765",
     "address": "Asam"
 }'
+
 
 6.Show Owner
 curl --location --request GET 'http://localhost:9090/show-owners' \
