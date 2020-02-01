@@ -1,0 +1,65 @@
+API for Building
+
+1.Add Building
+curl --location --request POST 'http://localhost:9090/add-building' \
+--header 'Content-Type: application/json' \
+--data-raw ' {
+        "name": "Lavander 2",
+        "address": "HSR ",
+        "totalHouses": 20
+    }'
+
+2.Show Buildings
+curl --location --request GET 'http://localhost:9090/show-buildings' \
+--data-raw ''
+
+3.Update Building
+curl --location --request PUT 'http://localhost:9090/update-building' \
+--header 'Content-Type: application/json' \
+--data-raw ' {		
+ 		"id": 2,
+        "name": "Lavander 1",
+        "address": "HSR ",
+        "totalHouses": 20
+    }'
+    
+    
+    
+    API for House/flate Owners
+    
+    4.Add Owner
+curl --location --request POST 'http://localhost:9090/add-owners' \
+--header 'Content-Type: application/json' \
+--data-raw '  {
+        "name": "Rajeev Kumar",
+        "mobileNo": "7645382920",
+        "address": "Asam"
+    }'
+
+5.Update Owner
+curl --location --request PUT 'http://localhost:9090/update-owners' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "id": 5,
+    "name": "Rajeev Ashami",
+    "mobileNo": "4365789765",
+    "address": "Asam"
+}'
+
+6.Show Owner
+curl --location --request GET 'http://localhost:9090/show-owners' \
+--header 'Content-Type: application/json' \
+--data-raw ''
+
+7.Show Owner By Id
+
+curl --location --request GET 'http://localhost:9090/show-owner-details?id=3' \
+--header 'Content-Type: application/json' \
+--data-raw ''
+
+
+8.Delete Owner Data
+
+curl --location --request DELETE 'http://localhost:9090/delete-owner-data?id=5' \
+--header 'Content-Type: application/json' \
+--data-raw ''
