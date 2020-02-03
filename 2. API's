@@ -64,3 +64,36 @@ curl --location --request PUT 'http://localhost:9090/houses/update-house' \
     }'
     
     
+    16. Show All Billings
+    
+    curl --location --request GET 'http://localhost:9090/billings/show-bills' \
+--header 'Content-Type: application/json' \
+--data-raw ''
+
+
+17. Add Bill details
+curl --location --request POST 'http://localhost:9090/billings/add-bill' \
+--header 'Content-Type: application/json' \
+--data-raw ' {
+        "houseId": "7",
+        "waterBill": "100",
+        "elecBill": "6000",
+        "maintenance": "600",
+        "parking": "200",
+        "status": "pending"
+    }'
+    
+    
+ 18.Update Bill status
+curl --location --request PUT 'http://localhost:9090/billings/update-bill' \
+--header 'Content-Type: application/json' \
+--data-raw ' {
+        "id": 7,
+        "houseId": "7",
+        "waterBill": "300",
+        "elecBill": "2000",
+        "maintenance": "600",
+        "parking": "200",
+        "status": "deposit"
+    }'
+    
